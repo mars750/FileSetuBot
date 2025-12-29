@@ -120,7 +120,7 @@ async def file_handler(client: Client, message: Message):
         file_id_str = generate_random_string()
         files_collection.insert_one({'_id': file_id_str, 'message_id': forwarded_message.id})
         bot_username = (await client.get_me()).username
-        share_link = f"https://t.me/{bot_username}?start={file_id_str}"
+        share_link = f"https://filesetu.blogspot.com?start={file_id_str}"
         await status_msg.edit_text(
             f"✅ **Link Generated Successfully!**\n\n🔗 Your Link: `{share_link}`",
             disable_web_page_preview=True
